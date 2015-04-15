@@ -1,10 +1,12 @@
 #!/bin/bash
 
 PATH=$PATH:/usr/local/bin
+CONVERT="${IM_CONVERT:-convert}"
 
 function run() {
+  echo "<style>img {image-rendering:-webkit-optimize-contrast;}</style>"
   echo "<h1>$1</h1>"
-  CONVERT="convert"
+  
   TMP_OUT=$(mktemp /tmp/fx-stdout.XXXX)
   TMP_ERR=$(mktemp /tmp/fx-stderr.XXXX)
   TMP_IMG=$(mktemp /tmp/fx-image.XXXX)
@@ -29,7 +31,7 @@ function run() {
 
 function generate_image_menu() {
   BASE_DIR=$(dirname "${TM_FILEPATH}")
-  BUILT_IN=("granite:", "logo:", "netscape:", "rose:", "wizard:")
+  BUILT_IN=("granite:" "logo:" "netscape:" "rose:" "wizard:")
   LOCAL_IMAGE=`find -E "${BASE_DIR}" -type f -regex '.*\.(jpe?g|png|tiff?|gif)' -exec basename \{\} ';' | head -n 5`
 
   OPTIONS=""
@@ -45,4 +47,10 @@ function generate_image_menu() {
   done
 
   SELECTED_XML=$("$DIALOG" menu --items "(${OPTIONS})")
+}
+
+
+
+term_lookup() {
+  HELP_TIP=$(xmllint -xpath "//dict/key[text() = '$1']/following::string[1]/text()" "${TM_BUNDLE_SUPPORT}/help_tooltips.plist" 2>/dev/null)
 }

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>u</key>
+    <string>first image in list</string>
+    <key>v</key>
+    <string>second image in list</string>
+    <key>s</key>
+    <string>current image in list (for %[fx:] otherwise = u)</string>
+    <key>t</key>
+    <string>index of current image (s) in list</string>
+    <key>n</key>
+    <string>number of images in list</string>
+    <key>i</key>
+    <string>column offset</string>
+    <key>j</key>
+    <string>row offset</string>
+    <key>p</key>
+    <string>pixel to use (absolute or relative to current pixel)</string>
+    <key>w</key>
+    <string>width of this image</string>
+    <key>h</key>
+    <string>height of this image</string>
+    <key>z</key>
+    <string>channel depth</string>
+    <key>r</key>
+    <string>red value (from RGBA), of a specific or current pixel</string>
+    <key>g</key>
+    <string>green value (from RGBA), of a specific or current pixel</string>
+    <key>b</key>
+    <string>blue value (from RGBA), of a specific or current pixel</string>
+    <key>a</key>
+    <string>alpha value (from RGBA), of a specific or current pixel</string>
+    <key>o</key>
+    <string>opacity value (from RGBA), of a specific or current pixel</string>
+    <key>c</key>
+    <string>cyan value of CMYK color of pixel</string>
+    <key>y</key>
+    <string>yellow value of CMYK color of pixel</string>
+    <key>m</key>
+    <string>magenta value of CMYK color of pixel</string>
+    <key>k</key>
+    <string>black value of CMYK color of pixel</string>
+    <key>intensity</key>
+    <string>pixel intensity</string>
+    <key>hue</key>
+    <string>pixel hue</string>
+    <key>saturation</key>
+    <string>pixel saturation</string>
+    <key>lightness</key>
+    <string>pixel lightness</string>
+    <key>luma</key>
+    <string>pixel luma</string>
+    <key>depth</key>
+    <string>image depth</string>
+    <key>minima</key>
+    <string>image minima</string>
+    <key>maxima</key>
+    <string>image maxima</string>
+    <key>mean</key>
+    <string>image mean</string>
+    <key>standard_deviation</key>
+    <string>image standard deviation</string>
+    <key>kurtosis</key>
+    <string>image kurtosis</string>
+    <key>skewness</key>
+    <string>image skewness</string>
+    <key>abs</key>
+    <string>abs(x): absolute value function</string>
+    <key>acos</key>
+    <string>acos(x): arc cosine function</string>
+    <key>acosh</key>
+    <string>acosh(x): inverse hyperbolic cosine function</string>
+    <key>airy</key>
+    <string>airy(x): Airy function (max=1, min=0); airy(x)=[jinc(x)]2=[2*j1(pi*x)/(pi*x)]2</string>
+    <key>alt</key>
+    <string>alt(x): sign alternation function (return 1.0 if int(x) is even, -1.0 if int(x) is odd)</string>
+    <key>asin</key>
+    <string>asin(x): arc sine function</string>
+    <key>asinh</key>
+    <string>asinh(x): inverse hyperbolic sine function</string>
+    <key>atan</key>
+    <string>atan(x): arc tangent function</string>
+    <key>atanh</key>
+    <string>atanh(x): inverse hyperbolic tangent function</string>
+    <key>atan2</key>
+    <string>atan2(y,x): arc tangent function of two variables</string>
+    <key>ceil</key>
+    <string>ceil(x): smallest integral value not less than argument</string>
+    <key>channel</key>
+    <string>channel(r,g,b,a): select numeric argument based on current channel</string>
+    <key>channel</key>
+    <string>channel(c,m,y,k,a): select numeric argument based on current channel</string>
+    <key>clamp</key>
+    <string>clamp(x): clamp value</string>
+    <key>cos</key>
+    <string>cos(x): cosine function</string>
+    <key>cosh</key>
+    <string>cosh(x): hyperbolic cosine function</string>
+    <key>debug</key>
+    <string>debug(x): print x (useful for debugging your expression)</string>
+    <key>drc</key>
+    <string>drc(x,y): dynamic range compression (knee curve); drc(x,y)=(x)/(y*(x-1)+1); -1&lt;y&lt;1</string>
+    <key>exp</key>
+    <string>exp(x): natural exponential function (ex)</string>
+    <key>floor</key>
+    <string>floor(x): largest integral value not greater than argument</string>
+    <key>gauss</key>
+    <string>gauss(x): gaussian function; gauss(x)=exp(-x*x/2)/sqrt(2*pi)</string>
+    <key>gcd</key>
+    <string>gcd(x,y): greatest common denominator</string>
+    <key>hypot</key>
+    <string>hypot(x,y): the square root of x2+y2</string>
+    <key>int</key>
+    <string>int(x): greatest integer function (return greatest integer less than or equal to x)</string>
+    <key>isnan</key>
+    <string>isnan(x): return 1.0 if x is NAN, 0.0 otherwise</string>
+    <key>j0</key>
+    <string>j0(x): Bessel functions of x of the first kind of order 0</string>
+    <key>j1</key>
+    <string>j1(x): Bessel functions of x of the first kind of order 1</string>
+    <key>jinc</key>
+    <string>jinc(x): jinc function (max=1, min=-0.1323); jinc(x)=2*j1(pi*x)/(pi**x)</string>
+    <key>ln</key>
+    <string>ln(x): natural logarithm function</string>
+    <key>log</key>
+    <string>log(x): logarithm base 10</string>
+    <key>logtwo</key>
+    <string>logtwo(x): logarithm base 2</string>
+    <key>ln</key>
+    <string>ln(x): natural logarithm</string>
+    <key>max</key>
+    <string>max(x, y): maximum of x and y</string>
+    <key>min</key>
+    <string>min(x, y): minimum of x and y</string>
+    <key>mod</key>
+    <string>mod(x, y): floating-point remainder function</string>
+    <key>not</key>
+    <string>not(x): return 1.0 if x is zero, 0.0 otherwise</string>
+    <key>pow</key>
+    <string>pow(x,y): power function (xy)</string>
+    <key>rand</key>
+    <string>rand(): value uniformly distributed over the interval [0.0, 1.0) with a 2 to the 128th-1 period</string>
+    <key>round</key>
+    <string>round(): round to integral value, regardless of rounding direction</string>
+    <key>sign</key>
+    <string>sign(x): return -1.0 if x is less than 0.0 otherwise 1.0</string>
+    <key>sin</key>
+    <string>sin(x): sine function</string>
+    <key>sinc</key>
+    <string>sinc(x): sinc function (max=1, min=-0.21); sinc(x)=sin(pi*x)/(pi*x)</string>
+    <key>squish</key>
+    <string>squish(x): squish function; squish(x)=1.0/(1.0+exp(-x))</string>
+    <key>sinh</key>
+    <string>sinh(x): hyperbolic sine function</string>
+    <key>sqrt</key>
+    <string>sqrt(x): square root function</string>
+    <key>tan</key>
+    <string>tan(x): tangent function</string>
+    <key>tanh</key>
+    <string>tanh(x): hyperbolic tangent function</string>
+    <key>trunc</key>
+    <string>trunc(x): round to integer, towards zero</string>
+    <key>while</key>
+    <string>while(condition,expression): interate while the condition is not equal to 0</string>
+  </dict>
+</plist>

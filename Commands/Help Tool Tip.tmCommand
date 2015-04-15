@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+[[ -f "${TM_BUNDLE_SUPPORT}/common.sh" ]] &amp;&amp; . "${TM_BUNDLE_SUPPORT}/common.sh"
+
+term_lookup ${TM_CURRENT_WORD}
+
+if [ ! -z "${HELP_TIP}" ]; then
+  echo "${HELP_TIP}"
+fi</string>
+	<key>input</key>
+	<string>word</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^h</string>
+	<key>name</key>
+	<string>Help Tool Tip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>scope</key>
+	<string>source.fx</string>
+	<key>uuid</key>
+	<string>15BAAABB-7E7A-4826-8C63-9C700EFB8A98</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
