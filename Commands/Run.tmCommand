@@ -2,17 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>autoScrollOutput</key>
+	<true/>
 	<key>beforeRunningCommand</key>
-	<string>nop</string>
+	<string>saveModifiedFiles</string>
 	<key>command</key>
 	<string>#!/bin/bash
 [[ -f "${TM_BUNDLE_SUPPORT}/common.sh" ]] &amp;&amp; . "${TM_BUNDLE_SUPPORT}/common.sh"
 
-SELECTED_XML=$("$DIALOG" menu --items '({title = "granite:";},{title = "logo:";},{title = "netscape:";},{title = "rose:";},{title = "wizard:";})')
+generate_image_menu
+
 if [[ ${#SELECTED_XML} -eq 0 ]]; then
   exit 0
 fi
 SELECTED_IMAGE=$(echo $SELECTED_XML | xmllint -xpath '//dict/string/text()' -)
+
+cd "${BASE_DIR}"
 run $SELECTED_IMAGE "${TM_FILEPATH}"</string>
 	<key>input</key>
 	<string>selection</string>
