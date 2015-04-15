@@ -3,21 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>saveModifiedFiles</string>
+	<string>nop</string>
 	<key>command</key>
 	<string>#!/bin/bash
 [[ -f "${TM_BUNDLE_SUPPORT}/common.sh" ]] &amp;&amp; . "${TM_BUNDLE_SUPPORT}/common.sh"
 
-run "rose:" "${TM_FILEPATH}"
-</string>
+SELECTED_XML=$("$DIALOG" menu --items '({title = "granite:";},{title = "logo:";},{title = "netscape:";},{title = "rose:";},{title = "wizard:";})')
+if [[ ${#SELECTED_XML} -eq 0 ]]; then
+  exit 0
+fi
+SELECTED_IMAGE=$(echo $SELECTED_XML | xmllint -xpath '//dict/string/text()' -)
+run $SELECTED_IMAGE "${TM_FILEPATH}"</string>
 	<key>input</key>
-	<string>document</string>
+	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>@R</string>
+	<string>@r</string>
 	<key>name</key>
-	<string>Run rose:</string>
+	<string>Run</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
@@ -26,10 +30,8 @@ run "rose:" "${TM_FILEPATH}"
 	<string>newWindow</string>
 	<key>scope</key>
 	<string>source.fx</string>
-	<key>semanticClass</key>
-	<string>process.run.fx</string>
 	<key>uuid</key>
-	<string>0086AA57-CCAA-433F-8C5A-5E79A5EE360E</string>
+	<string>BEE619BB-E8F4-4D25-8937-F1A85AE714F5</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>
