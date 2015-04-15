@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+[[ -f "${TM_BUNDLE_SUPPORT}/common.sh" ]] &amp;&amp; . "${TM_BUNDLE_SUPPORT}/common.sh"
+
+SELECTED_XML=$("$DIALOG" menu --items '({title = "granite:";},{title = "logo:";},{title = "netscape:";},{title = "rose:";},{title = "wizard:";})')
+if [[ ${#SELECTED_XML} -eq 0 ]]; then
+  exit 0
+fi
+SELECTED_IMAGE=$(echo $SELECTED_XML | xmllint -xpath '//dict/string/text()' -)
+run $SELECTED_IMAGE "${TM_FILEPATH}"</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>source.fx</string>
+	<key>uuid</key>
+	<string>BEE619BB-E8F4-4D25-8937-F1A85AE714F5</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

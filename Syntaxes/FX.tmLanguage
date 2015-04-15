@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>fx</string>
+	</array>
+	<key>keyEquivalent</key>
+	<string>^~F</string>
+	<key>name</key>
+	<string>FX</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\bwhile\b</string>
+			<key>name</key>
+			<string>keyword.control.fx</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(abs|acos|acosh|airy|alt|asin|asinh|atan|atanh|atan2|ceil|clamp|cos|cosh|debug|drc|exp|floor|gauss|gcd|hypot|int|isnan|j0|j1|jinc|ln|log|logtwo|max|min|mod|not|pow|rand|round|sign|sin|sinc|sinh|sqrt|squish|tan|tanh|trunc)\b</string>
+			<key>name</key>
+			<string>entity.function.fx</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[\*\^\-\*\/\%\+\-\&lt;\&gt;\=\!\&amp;\|\~\?\:]</string>
+			<key>name</key>
+			<string>keyword.operator.fx</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(u|v|s|t|n|i|j|p|w|h|z|r|g|b|a|o|c|y|m|k|intensity|hue|saturation|lightness|luma|page.(width|height|x|y)|resolution.(x|y)|depth|minima|maxima|mean|standard_deviation|kurtosis|skewness)\b</string>
+			<key>name</key>
+			<string>variable.language.fx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>http://www.w3.org/TR/CSS21/syndata.html#value-def-color</string>
+			<key>match</key>
+			<string>\b(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\b</string>
+			<key>name</key>
+			<string>support.constant.color.w3c-standard-color-name.fx</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b</string>
+			<key>name</key>
+			<string>support.constant.color.hex-value.fx</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(E(psilon)?|Quantum(Range|Scale)|Opaque|Ph?i|Transparent)\b</string>
+			<key>name</key>
+			<string>constant.language.fx</string>
+		</dict>
+	</array>
+	<key>scope</key>
+	<string>source.fx</string>
+	<key>scopeName</key>
+	<string>source.fx</string>
+	<key>uuid</key>
+	<string>A999B2ED-1BE2-463C-B528-6553DEF5A1E2</string>
+</dict>
+</plist>
