@@ -80,6 +80,14 @@
 			<key>name</key>
 			<string>constant.numeric.scientfic.fx</string>
 		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\)(?!\z|.)</string>
+			<key>end</key>
+			<string>^$</string>
+			<key>name</key>
+			<string>invalid.illegal.fx</string>
+		</dict>
 	</array>
 	<key>scope</key>
 	<string>source.fx</string>

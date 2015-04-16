@@ -1,5 +1,5 @@
-# ImageMagickFX.tmbundle ##
-TextMate2 bundle for working with FX expressions
+# ImageMagick FX Expressions ##
+TextMate bundle for working with FX expressions
 
 ## Syntax & Code Folding##
 Language grammar, functions, color names & values are highlighted respecting TextMate's theme selectors.
